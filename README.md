@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://circleci.com/gh/hamb-ru/udacity-course5-project.svg?style=svg)](https://app.circleci.com/pipelines/github/hamb-ru/udacity-course5-project)
 
 ## Project Overview
 

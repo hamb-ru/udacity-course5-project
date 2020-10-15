@@ -1,0 +1,7 @@
+Flask
+pandas
+pylint
+ipython
+pylint-flask
+numpy
+scikit-learn==0.20.3

@@ -1,0 +1,55 @@
+[ec2-user@ip-172-31-12-16 kubernetes]$ ./run_kubernetes.sh
+deployment.apps/dmalinovproject created
+NAMESPACE     NAME                               READY   STATUS              RESTARTS   AGE
+default       dmalinovproject-7579696b8d-kpbfh   0/1     ContainerCreating   0          0s
+kube-system   coredns-f9fd979d6-h4gt8            1/1     Running             0          26h
+kube-system   etcd-minikube                      1/1     Running             0          26h
+kube-system   kube-apiserver-minikube            1/1     Running             0          26h
+kube-system   kube-controller-manager-minikube   1/1     Running             0          26h
+kube-system   kube-proxy-b2v6q                   1/1     Running             0          26h
+kube-system   kube-scheduler-minikube            1/1     Running             0          26h
+kube-system   storage-provisioner                1/1     Running             0          26h
+
+[ec2-user@ip-172-31-12-16 kubernetes]$ kubectl get pods --all-namespaces
+NAMESPACE     NAME                               READY   STATUS              RESTARTS   AGE
+default       dmalinovproject-7579696b8d-kpbfh   0/1     ContainerCreating   0          38s
+kube-system   coredns-f9fd979d6-h4gt8            1/1     Running             0          26h
+kube-system   etcd-minikube                      1/1     Running             0          26h
+kube-system   kube-apiserver-minikube            1/1     Running             0          26h
+kube-system   kube-controller-manager-minikube   1/1     Running             0          26h
+kube-system   kube-proxy-b2v6q                   1/1     Running             0          26h
+kube-system   kube-scheduler-minikube            1/1     Running             0          26h
+kube-system   storage-provisioner                1/1     Running             0          26h
+
+[ec2-user@ip-172-31-12-16 kubernetes]$ kubectl get pods
+NAME                               READY   STATUS    RESTARTS   AGE
+dmalinovproject-7579696b8d-kpbfh   1/1     Running   0          51s
+[ec2-user@ip-172-31-12-16 kubernetes]$ kubectl get pods --all-namespaces
+NAMESPACE     NAME                               READY   STATUS    RESTARTS   AGE
+default       dmalinovproject-7579696b8d-kpbfh   1/1     Running   0          57s
+kube-system   coredns-f9fd979d6-h4gt8            1/1     Running   0          26h
+kube-system   etcd-minikube                      1/1     Running   0          26h
+kube-system   kube-apiserver-minikube            1/1     Running   0          26h
+kube-system   kube-controller-manager-minikube   1/1     Running   0          26h
+kube-system   kube-proxy-b2v6q                   1/1     Running   0          26h
+kube-system   kube-scheduler-minikube            1/1     Running   0          26h
+kube-system   storage-provisioner                1/1     Running   0          26h
+
+
+[ec2-user@ip-172-31-12-16 kubernetes]$ ./run_kubernetes.sh
+error: failed to create deployment: deployments.apps "dmalinovproject" already exists
+NAMESPACE     NAME                               READY   STATUS    RESTARTS   AGE
+default       dmalinovproject-7579696b8d-kpbfh   1/1     Running   0          2m45s
+kube-system   coredns-f9fd979d6-h4gt8            1/1     Running   0          26h
+kube-system   etcd-minikube                      1/1     Running   0          26h
+kube-system   kube-apiserver-minikube            1/1     Running   0          26h
+kube-system   kube-controller-manager-minikube   1/1     Running   0          26h
+kube-system   kube-proxy-b2v6q                   1/1     Running   0          26h
+kube-system   kube-scheduler-minikube            1/1     Running   0          26h
+kube-system   storage-provisioner                1/1     Running   0          26h
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
+
+
